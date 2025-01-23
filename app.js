@@ -1,54 +1,91 @@
-// On créér un tableau uniquement composé de bonnes reponses
-
+// recuperer toutes les bonnes reponses dans un tableau
 const bonneReponse = ["a", "b", "a", "d", "c"]
 const form = document.querySelector('.quizz-form')
-let rejouer = document.getElementById('rejouer')
 
-form.addEventListener('submit', funcForm)
+// fonction pour determiner les bonnes reponses dans le formulaire
 
-function funcForm(e){
-    // etant donné que c'est une form on doit annuler son comportement de base
+function formFormulaire(e){
     e.preventDefault();
-    const resultat = []
-    const tousLesBoutonsRadios = document.querySelectorAll("input[type='radio']:checked")
-
-    tousLesBoutonsRadios.forEach((radioButtons, index)=> {
-        if (radioButtons.value === bonneReponse[index]) {
+    const  resultat = []
+    const allInputButton = document.querySelectorAll("input[type='radio']:checked")
+    
+    allInputButton.forEach((choixUser, indexBonneReponse) => {
+        if (choixUser.value === bonneReponse[indexBonneReponse]) {
             resultat.push(true)
         } else {
             resultat.push(false)
         }
     })
 
-    funcResultat(resultat)
+    console.log(resultat)
+    result(resultat)
 }
 
-const resultat = document.querySelector('.resultat')
-const titreResultat = document.querySelector('.resultat h2')
-const scoreResultat = document.querySelector('.resultat , score')
-const infoResultat = document.querySelector('.resultat, .info')
+form.addEventListener('submit', formFormulaire)
 
-function funcResultat(res){
-    // nombre d'erreurs
-    const nombrebonnereponses = res.filter(el => el === true).length;
-    console.log(nombrebonnereponses)
-    resultat.style.textAalign = 'center'
-    resultat.style.display = 'flex'
-    resultat.style.alignItems = 'center'
-    scoreResultat.textContent = `Score : ${nombrebonnereponses} / ${bonneReponse.length}`;
 
+const resultat = document.querySelector('.resultat');
+const titreResultat = document.querySelector('.resultat h2');
+const scoreResultat = document.querySelector('.resultat .score');
+const infoResultat = document.querySelector('.resultat .info');
+
+function result(reponses) {
+
+
+    // On filtre les reponses
+    const numberGutAnswer = reponses.filter(function(rep){
+        return rep === false;
+    }).length;
+    
+    console.log(numberGutAnswer);
+
+    switch(numberGutAnswer){
+        case 0:
+        resultat.style.backgroundColor = "rgb(125, 241, 129)"
+        titreResultat.innerText = `😎Félicitation, c'est un sans faute !😎`;
+        infoResultat.innerText = `👏👏👏👏👏👏`;
+        scoreResultat.innerHTML = "Score: <span> 5 / 5 </span>"
+      ;
+      break;
+        case 1:
+        resultat.style.backgroundColor = "rgb(241, 125, 125)"
+        titreResultat.innerText = `😅Il y a ${numberGutAnswer} erreur 😅`;
+        infoResultat.innerText = `Presque !!!`;
+        scoreResultat.innerHTML = "Score: <span> 4 / 5 </span>"
+      break;
+        case 2:
+        resultat.style.backgroundColor = "rgb(241, 125, 125)"
+        titreResultat.innerText = `😅Il y a ${numberGutAnswer} erreurs 😅`;
+        infoResultat.innerText = `Oups !!!`;
+        scoreResultat.innerHTML = "Score: <span> 3 / 5 </span>"
+      break;
+        case 3:
+        resultat.style.backgroundColor = "rgb(241, 125, 125)"
+        titreResultat.innerText = `😅Il y a ${numberGutAnswer} erreurs 😅`;
+        infoResultat.innerText = `Oups !!!`;
+        scoreResultat.innerHTML = "Score: <span> 2 / 5 </span>"
+      break;
+        case 4:
+        resultat.style.backgroundColor = "rgb(241, 125, 125)"
+        titreResultat.innerText = `😅Il y a ${numberGutAnswer} erreurs 😅`;
+        infoResultat.innerText = `Oups !!!`;
+        scoreResultat.innerHTML = "Score: <span> 1 / 5 </span>"
+      break;
+        case 5:
+        resultat.style.backgroundColor = "rgb(241, 125, 125)"
+        titreResultat.innerText = `😅Il y a ${numberGutAnswer} erreurs 😅`;
+        infoResultat.innerText = `Oups !!!`;
+        scoreResultat.innerHTML = "Score: <span> 1 / 6 </span>"
+      break;
+      default:
+          titreResultat.innerText = `Erreur innatendu !`;
+      }
 }
 
-function funcrejouer(e) {
-    e.preventDefault(); // Empêche l'action par défaut du bouton
 
-    // Rafraîchir la page
-    location.reload(); // Cela recharge la page
+function funcrejouer (e){
+    e.preventDefault();
+    location.reload();
 }
-
-rejouer.addEventListener('click', funcrejouer); // Ajoute l'événement au bouton "Rejouer"
-
-
-
 
 rejouer.addEventListener('click', funcrejouer)
