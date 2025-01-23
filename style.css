@@ -83,3 +83,14 @@ h2 {
 #rejouer {
     background-color: gray;
 }
+
+@media screen and (max-width: 650px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+    #rejouer {
+        background: coral;
+        font-size: 2rem;
+    }
+}
