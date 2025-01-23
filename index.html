@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form  class="quizz-form">
+            <div class="container-question">
+                <div class="box-question">
+                    <h4>Quelle est la capital de la France</h4>
+                    <div>
+                        <input type="radio" name="q1" id="paris" value="a" checked>
+                        <label for="paris">Paris</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q1" id="marseille" value="b">
+                        <label for="marseille">Marseille</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q1" id="madrid" value="c">
+                        <label for="madrid">Madrid</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q1" id="lyon" value="d">
+                        <label for="lyon">Lyon</label>
+                    </div>
+                </div>
+
+                <div class="box-question">
+                    <h4>Quelle est la capital de l'Allemagne</h4>
+                    <div>
+                        <input type="radio" name="q2" id="Rome" value="a" checked>
+                        <label for="rome">Marseille</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q2" id="berlin" value="b">
+                        <label for="berlin">Berlin</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q2" id="madrid" value="c">
+                        <label for="frankfurt">Frankfurt</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q2" id="lyon" value="d">
+                        <label for="lyon">Lyon</label>
+                    </div>
+                </div>
+
+
+                <div class="box-question">
+                    <h4>Quelle est la capital du Cameroun</h4>
+                    <div>
+                        <input type="radio" name="q3" id="yaounde" value="a" checked>
+                        <label for="doula">Douala</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q3" id="marseille" value="b">
+                        <label for="marseille">Marseille</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q3" id="madrid" value="c">
+                        <label for="madrid">Madrid</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q3" id="yaounde" value="d">
+                        <label for="yaounde">Lyon</label>
+                    </div>
+                </div>
+
+                <div class="box-question">
+                    <h4>Quelle est la capital de l'Italie</h4>
+                    <div>
+                        <input type="radio" name="q4" id="marseille" value="a" checked>
+                        <label for="marseille">Marseille</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q4" id="madrid" value="b">
+                        <label for="madrid">Madrid</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q4" id="lyon" value="c">
+                        <label for="lyon">Lyon</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q4" id="rome" value="d">
+                        <label for="rome">Rome</label>
+                    </div>
+                </div>
+
+                <div class="box-question">
+                    <h4>Quelle est la capital de la Turquie</h4>
+                    <div>
+                        <input type="radio" name="q5" id="marseille" value="a" checked>
+                        <label for="marseille">Marseille</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q5" id="madrid" value="b">
+                        <label for="madrid">Madrid</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q5" id="istanbul" value="c">
+                        <label for="istanbul">Istanbul</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q5" id="rome" value="d">
+                        <label for="rome">Rome</label>
+                    </div>
+                </div>
+            </div>
+            <div class="resultat">
+                <button type="submit">Validez vos réponses</button>
+                <h2>Validez vos reponses pour voir le resultat</h2>
+                <p class="score"></p>
+                <p class="info"></p>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+<!--
+
+
+    <div class="container">
+
+        <form class="quizz-form">
+            <div class="qst" id="q1">
+                <h3>Quel est la capitale de la France</h3>
+                <input type="checkbox" name="" id="anw1">
+                <label for="anw1">Berlin</label>
+                
+                <input type="checkbox" name="" id="anw2">
+                <label for="anw2">Paris</label>
+                
+                <input type="checkbox" name="" id="anw3">
+                <label for="anw3">Monaco</label>
+                
+                <input type="checkbox" name="" id="anw4">
+                <label for="anw4">Marseille</label>
+            </div>
+            
+            <div class="qst" id="q2">
+                <h3>Quel est la capitale de l'Ecosse</h3>
+                <input type="checkbox" name="" id="anw1">
+                <label for="anw1">Glasgow</label>
+                
+                <input type="checkbox" name="" id="anw2">
+                <label for="anw2">Dundee</label>
+                
+                <input type="checkbox" name="" id="anw3">
+                <label for="anw3">Stirling</label>
+                
+                <input type="checkbox" name="" id="anw4">
+                <label for="anw4">Edingburg</label>
+            </div>
+            
+            <div class="qst" id="q3">
+                <h3>Quel est la capitale de la suède</h3>
+                <input type="checkbox" name="" id="anw1">
+                <label for="anw1">Uppsale</label>
+                
+                <input type="checkbox" name="" id="anw2">
+                <label for="anw2">Kiruna</label>
+                
+                <input type="checkbox" name="" id="anw3">
+                <label for="anw3">Stockholm</label>
+                
+                <input type="checkbox" name="" id="anw4">
+                <label for="anw4">Malmo</label>
+            </div>
+            
+            <div class="qst" id="q4">
+                <h3>Quel est la capitale de Italie</h3>
+                <input type="checkbox" name="" id="anw1">
+                <label for="anw1">Rome</label>
+                
+                <input type="checkbox" name="" id="anw2">
+                <label for="anw2">santiago</label>
+                
+                <input type="checkbox" name="" id="anw3">
+                <label for="anw3">Monaco</label>
+                
+                <input type="checkbox" name="" id="anw4">
+                <label for="anw4">Vina del mar</label>
+            </div>
+            
+            <div class="qst" id="q5">
+                <h3>Quel est la capitale du Cameroun</h3>
+                <input type="checkbox" name="" id="anw1">
+                <label for="anw1">Douala</label>
+                
+                <input type="checkbox" name="" id="anw2">
+                <label for="anw2">Paris</label>
+                
+                <input type="checkbox" name="" id="anw3">
+                <label for="anw3">Monaco</label>
+                
+                <input type="checkbox" name="" id="anw4">
+                <label for="anw4">Yaounde</label>
+            </div>
+            
+            <div class="qst" id="q6">
+                <h3>Quel est la capitale de l'espagne</h3>
+                <input type="checkbox" name="" id="anw1">
+                <label for="anw1">Lyon</label>
+                
+                <input type="checkbox" name="" id="anw2">
+                <label for="anw2">Madrid</label>
+                
+                <input type="checkbox" name="" id="anw3">
+                <label for="anw3">Barcelone</label>
+                
+                <input type="checkbox" name="" id="anw4">
+                <label for="anw4">Marseille</label>
+            </div>
+
+        </form>
+    </div>
+
+
+    <section class="result">
+        <div class="resultat">
+            <button type="submit">Validez vos réponses</button>
+            <div id="checkAnswer"></div>
+            <div class="score">
+                <h5>Score:</h5>
+            </div>
+            <div class="evaluation"></div>
+        </div>
+    </section>
+
+-->
+  
+    <script src="./app.js"></script>
+</body>
+</html>
