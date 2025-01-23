@@ -2,6 +2,7 @@
 
 const bonneReponse = ["a", "b", "a", "d", "c"]
 const form = document.querySelector('.quizz-form')
+let rejouer = document.getElementById('rejouer')
 
 form.addEventListener('submit', funcForm)
 
@@ -36,19 +37,18 @@ function funcResultat(res){
     resultat.style.alignItems = 'center'
     scoreResultat.textContent = `Score : ${nombrebonnereponses} / ${bonneReponse.length}`;
 
-
-
-    // switch (nombreErreurs) {
-    //     case 0:
-    //         resultat.style.background = 'green'
-    //         titreResultat.innerText = `😎 Félicitation c'est un sans faute 😎`
-    //         infoResultat.innerText = ` 👏 👏 👏 👏 👏 👏`;
-    //         scoreResultat.innerHTML = `Score: <span> 6 / 6 </span>`;
-
-            
-    //         break;
-    
-    //     default:
-    //         break;
-    // }
 }
+
+function funcrejouer(e) {
+    e.preventDefault(); // Empêche l'action par défaut du bouton
+
+    // Rafraîchir la page
+    location.reload(); // Cela recharge la page
+}
+
+rejouer.addEventListener('click', funcrejouer); // Ajoute l'événement au bouton "Rejouer"
+
+
+
+
+rejouer.addEventListener('click', funcrejouer)
